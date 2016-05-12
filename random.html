@@ -1,0 +1,93 @@
+<head>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/random.css"/>
+	<link rel="icon" type="image/png" href="assets/favicon.png"/>
+	<script src="scripts/random.js"></script>
+	<!-- [if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+		</script>
+	<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<title>Waste Some Time Popping Bubbles</title>
+		<header>
+			<h1>Time Wasters</h1>
+			<h3>Don't blame me. You came here on your own.</h3>
+		</header>
+		<nav>
+			<ul style="margin-top: 0">
+				<li><a href="index.html">Make Some Beads</a></li>
+				<li><a href="bubbles.html">Pop Some Bubbles</a></li>
+				<li><a href="clock.html">Watch the Clock</a></li>
+				<li class="dropdown"><a href="random.html" class="droplink">Randomize Stuff</a>
+					<ul class="droplinks">
+						<li style="list-style-image: url('assets/favicon.png')"><a href="random.html#beefyname">Beefy Names</a></li>
+						<li style="list-style-image: url('assets/favicon.png')"><a href="random.html#faeriename">Faerie Names</a></li>
+						<li style="list-style-image: url('assets/favicon.png')"><a href="random.html#backstory">Adventurer Backstory</a></li>
+						<li style="list-style-image: url('assets/favicon.png')"><a href="random.html#story">Pet Story</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a href="other.html" class="droplink">Other Time Wasters</a>
+					<ul class="droplinks">
+						<li style="list-style-image: url('assets/cookie.ico')"><a href="http://orteil.dashnet.org/cookieclicker/">Cookie Clicker</a></li>
+						<li style="list-style-image: url('assets/candyBox2Icon.png')"><a href="http://candybox2.net/">Candy Box 2</a></li>
+						<li style="list-style-image: url('assets/2048small.png')"><a href="http://2048game.com/">2048</a></li>
+						<li style="list-style-image: url('assets/cow.png')"><a href="http://www.findtheinvisiblecow.com/">Find the Invisible Cow</a></li>
+						<li style="list-style-image: url('assets/favicon.png')"><a href="http://hackertyper.com/">HackerTyper</a></li>
+						<li style="list-style-image: url('assets/glogo.jpg')"><a href="https://archive.org/details/msdos_Oregon_Trail_Deluxe_The_1992">The Oregon Trail</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<div style="text-align: center">
+				<h1>May the Odds Be Ever in Your Favor</h1>
+				<img src="assets/dicedrawn.png" width="60%">
+				<br>
+				<h3>Making decisions is hard. Let the Great Random help you out.</h3>
+			</div>
+			<br>
+			<div id="beefyname">
+				<h1>Random Beefy Names</h1>
+				<p>You seem like a pretty tough dude. I bet you want a name that suits someone just as beefy as you. Why don't you give it a go?</p>
+				<button onclick="beefyNameClicked()">Gimme a Beefy Name!</button>
+				<div class="randomresult" id="beefyName"></div>
+			</div>
+			<hr>
+			<div id="faeriename">
+				<h1>Random Faerie Names</h1>
+				<p>Well aren't you just a little ray of sunshine! A dainty, pretty little thing like you needs a sweet name to go along. </p>
+				<button onclick="faerieNameClicked()">Gimme a Faerie Name!</button>
+				<div class="randomresult" id="faerieName"></div>
+			</div>
+			<hr>
+			<div id="backstory">
+				<h1>Adventurer Backstory</h1>
+				<p>RPGs are fun, but sometimes it's just too hard to come up with a good backstory for a character. Now that you've got your name, let's see what else we can come up with for you.</p>
+				<button onclick="backstoryClicked()">What's my backstory?</button>
+				<div class="randomresult" id="charBackstory"></div>
+			</div>
+			<hr>
+			<div id="story">
+				<h1>A Walk with My Pet</h1>
+				<p>Remember that time you went for a walk with your pet and that thing happened? No? Let's refresh your memory.</p>
+				<button onclick="storyClicked()">Tell me the story!</button>
+				<div class="randomresult" id="petStory"></div>
+			</div>
+			
+		</main>
+		<footer>Copyright &copy 2016 Pointless Endeavors, LLC<br>
+			<a href="mailto:bobbi@schmidt.com">bobbi@schmidt.com</a>
+			<br>
+			<hr>
+			<i>
+				<div>This website, as it relates to a website design course, is for educational purposes only. It is published for a limited time for grading purposes. It will be removed at the end of the course. Any views and/or content are the sole responsibility of the student website designer.
+				</div>
+				<div>Website modified and maintained by Schmidt, 05/11/2016.</div>
+			</i>
+		</footer>
+	</div>
+</body>

@@ -1,0 +1,17 @@
+table {
+  border-collapse: collapse;
+}
+
+td:first-child {
+	min-width: 300px;
+	border-right: 2px #665588 solid;
+	text-align: center;
+}
+
+td:last-child {
+	padding: 10px;
+}
+
+tr {
+	border-bottom: 2px #665588 solid;
+}

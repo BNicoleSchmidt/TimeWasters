@@ -1,0 +1,97 @@
+<head>
+	<link rel="stylesheet" href="css/beads.css"/>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="icon" type="image/png" href="assets/favicon.png"/>
+	<script src="scripts/beads.js"></script>
+	<!-- [if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+		</script>
+	<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<title>Waste Some Time Making Beads</title>
+		<header>
+			<h1>Time Wasters</h1>
+			<h3>Don't blame me. You came here on your own.</h3>
+		</header>
+		<nav>
+			<ul style="margin-top: 0">
+				<li><a href="index.html">Make Some Beads</a></li>
+				<li><a href="bubbles.html">Pop Some Bubbles</a></li>
+				<li><a href="clock.html">Watch the Clock</a></li>
+				<li class="dropdown"><a href="random.html" class="droplink">Randomize Stuff</a>
+					<ul class="droplinks">
+						<li style="list-style-image: url('assets/favicon.png')"><a href="random.html#beefyname">Beefy Names</a></li>
+						<li style="list-style-image: url('assets/favicon.png')"><a href="random.html#faeriename">Faerie Names</a></li>
+						<li style="list-style-image: url('assets/favicon.png')"><a href="random.html#backstory">Adventurer Backstory</a></li>
+						<li style="list-style-image: url('assets/favicon.png')"><a href="random.html#story">Pet Story</a></li>
+					</ul>
+				</li>
+				<li class="dropdown"><a href="other.html" class="droplink">Other Time Wasters</a>
+					<ul class="droplinks">
+						<li style="list-style-image: url('assets/cookie.ico')"><a href="http://orteil.dashnet.org/cookieclicker/">Cookie Clicker</a></li>
+						<li style="list-style-image: url('assets/candyBox2Icon.png')"><a href="http://candybox2.net/">Candy Box 2</a></li>
+						<li style="list-style-image: url('assets/2048small.png')"><a href="http://2048game.com/">2048</a></li>
+						<li style="list-style-image: url('assets/cow.png')"><a href="http://www.findtheinvisiblecow.com/">Find the Invisible Cow</a></li>
+						<li style="list-style-image: url('assets/favicon.png')"><a href="http://hackertyper.com/">HackerTyper</a></li>
+						<li style="list-style-image: url('assets/glogo.jpg')"><a href="https://archive.org/details/msdos_Oregon_Trail_Deluxe_The_1992">The Oregon Trail</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<main>
+			<h1>Trade Some Beads</h1>
+			<p style="margin-bottom:40px">You're now a beadmaker! But it's hard to make colors. You can only make white, and need to trade for other colors. 10 white will get you 1 black, 10 black will get you 1 yellow, and so on. Can you make it all the way to purple?</p>
+			<div id="beadmaker">
+				<div><button id="whitebutton" onclick="whiteclicked()" style="background-color:white">Make a White Bead</button><span id="whitecount">You have 0 white beads.</span></div>
+				<div><button id="blackbutton" onclick="blackclicked()" style="background-color:black" disabled="true">Trade for a Black Bead</button><span id="blackcount">You have 0 black beads.</span></div>
+				<div><button id="yellowbutton" onclick="yellowclicked()"  style="background-color:yellow"disabled="true">Trade for a Yellow Bead</button><span id="yellowcount">You have 0 yellow beads.</span></div>
+				<div><button id="greenbutton" onclick="greenclicked()" style="background-color:green" disabled="true">Trade for a Green Bead</button><span id="greencount">You have 0 green beads.</span></div>
+				<div><button id="bluebutton" onclick="blueclicked()" style="background-color:blue" disabled="true">Trade for a Blue Bead</button><span id="bluecount">You have 0 blue beads.</span></div>
+				<div><button id="orangebutton" onclick="orangeclicked()" style="background-color:orange" disabled="true">Trade for an Orange Bead</button><span id="orangecount">You have 0 orange beads.</span></div>
+				<div><button id="redbutton" onclick="redclicked()" style="background-color:red" disabled="true">Trade for a Red Bead</button><span id="redcount">You have 0 red beads.</span></div>
+				<div><button id="purplebutton" onclick="purpleclicked()" style="background-color:purple" disabled="true">Trade for a Purple Bead</button><span id="purplecount">You have 0 purple beads.</span></div>
+			</div>
+			<table id="achievements">
+				<tr>
+					<th colspan="2" height="25px">Achievements</th>
+				</tr>
+				<tr>
+					<td><img id="whitechievo" src="assets/white-beads.png" title="White Beads - Aww, you made your first bead!"></td>
+					<td><img id="blackchievo" src="assets/black-beads.png" title="Black Beads - Newbie Trader"></td>
+				</tr>
+				<tr>
+					<td><img id="yellowchievo" src="assets/yellow-beads.png" title="Yellow Beads - Sunshine...will you ever see it again?"></td>
+					<td><img id="greenchievo" src="assets/green-beads.png" title="Green Beads - The color of envy...Do you yearn for more?"></td>
+				</tr>
+				<tr>
+					<td><img id="bluechievo" src="assets/blue-beads.png" title="Blue Beads - Da ba dee da ba di o/`"></td>
+					<td><img id="orangechievo" src="assets/orange-beads.png" title="Orange Beads - Way to go! Each orange bead is 1% of what you need for Purple!"></td>
+				</tr>
+				<tr>
+					<td><img id="redchievo" src="assets/red-beads.png" title="Red Beads - Is there more to life than clicking? It's all I can remember..."></td>
+					<td><img id="purplechievo" src="assets/purple-beads.png" title="Purple Beads - You did it! You can finally stop clicking!"></td>
+			</table>
+			<div class="spiral">
+				<img class="still" src="assets/spiral.png">
+				<img class="spin" src="assets/spiral.gif">
+			</div>
+		</main>
+		<footer>
+			<img src="assets/pointlessBanner.png">
+			<div>Copyright &copy 2016 Pointless Endeavors, LLC<br>
+			<a href="mailto:bobbi@schmidt.com">bobbi@schmidt.com</a><br>
+			<a href="sitemap.html">Sitemap</a><br>
+			</div>
+			<hr>
+			<i>
+				<div>This website, as it relates to a website design course, is for educational purposes only. It is published for a limited time for grading purposes. It will be removed at the end of the course. Any views and/or content are the sole responsibility of the student website designer.
+				</div>
+				<div>Website modified and maintained by Schmidt, 05/11/2016.</div>
+			</i>
+		</footer>
+	</div>
+</body>
